@@ -10,6 +10,7 @@ You will need [Leiningen][1] 2 installed.
 
 ## Running
 Build the Clojurescript:
+
     lein cljsbuild once
 
 To start a web server for the application, run:

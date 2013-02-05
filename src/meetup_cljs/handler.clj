@@ -9,11 +9,14 @@
   (html5 
    [:body 
     [:h1 "Clojure Meetup cljs demo"]
-    [:button "The Button"]
+    [:button#tb "The Button"]
     [:div#the-box "Stuff goes here"]
+    (include-js "//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
     (include-js "js/main.js")]))
 
 (defroutes app-routes
+  (GET "/edn" [] (pr-str {:name "Paul" :id "pbostrom"}))
+  (GET "/json" [] "{\"name\": \"Paul\" \"id\": \"pbostrom\"}")
   (GET "/" [] (home-page))
   (route/resources "/")
   (route/not-found "Not Found"))

@@ -1,11 +1,27 @@
 cljs-build
+ ClojureScript versions
  Advanced compilation
 piggieback/nrepl
 Javascript interop
  js namespace
  methods and fields
  cljs->js and js->cljs
- Javascript libraries (jQuery)
+ Javascript libraries
+  - include in global js namespace via HTML <script> tag
+  - Compile with Google Closure
  this-as
-
+ Calling cljs from js
+ ^:export metadata (does not munge
+Macros
+ written in Clojure
+ Include with :require-macros instead of :require
+Pure Clojurescript libraries/wrappers
+ enfocus
+ domina
+ jayq
+ C2
+Sharing clj/cljs code
+ cljs-build crossovers
+ cljx
+Source maps for debugging
  

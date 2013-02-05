@@ -11,7 +11,9 @@
   {:builds [
             {:source-paths ["src-cljs"]
              :compiler
-             {:output-to "resources/public/js/main.js"}}]}
+             {:output-to "resources/public/js/main.js"
+              :externs ["externs/jquery-1.8.js"]
+              :optimizations :whitespace}}]}
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
   :profiles
   {:dev {:dependencies [[ring-mock "0.1.3"]]}}
